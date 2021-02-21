@@ -1,0 +1,360 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+%% This template licensed under CC-BY-NC-SA by Koenraad De Smedt
+\documentclass[final,12pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{fontspec,xltxtra,polyglossia,titling,graphicx,dingbat}
+\usepackage{verbatim,gb4e,synttree,multicol} % choose or add what you need   
+\usepackage[colorlinks,urlcolor=blue,citecolor=black,linkcolor=black]{hyperref}
+\setmainfont[Mapping=tex-text]{Times New Roman} % or another similar font
+\setdefaultlanguage{spanish}
+%\setotherlanguages{english}
+\usepackage[numbers]{natbib}
+\usepackage{xspace}
+
+\usepackage[utf8]{inputenc}
+\frenchspacing
+%\newcommand{\checkmark}{x}
+
+\title{[TÍTULO DEL PROYECTO DE INVESTIGACIÓN]} % replace with title of your term paper
+\author{[Nombre del alumno]} % replace with your candidate number, not your name
+\date{\today}
+\hyphenation{unicode}
+\usepackage{url}
+\usepackage{hyperref}
+
+\begin{document}
+	\thispagestyle{empty}
+\begin{center} \vfill
+{\Large UNIVERSIDAD AUTÓNOMA DE CIUDAD JUÁREZ}\\
+\vspace{6mm}
+{\large Instituto de Ingeniería y Tecnología\\
+\vspace{6mm}
+Departamento de Ingeniería Eléctrica y Computación
+\vspace{20mm}
+
+\includegraphics [scale=0.7]{escudo-uacj} 
+\vspace{10mm}
+
+
+% Clave: IEC982300B % replace with course code
+
+% Materia: Seminario de Titulación I % replace with course title
+
+% Semestre: Otoño 2017 % replace with term and year of the exam
+
+% Matrícula: 123456 \theauthor \vfill
+
+\thetitle\\
+\vspace{15mm}
+
+
+Protocolo de investigación presentado por:\\
+\vspace{6mm}
+\theauthor\hspace{10mm} [Matrícula]\\
+\vspace{10mm}
+Requisito para la obtención del título de\\
+\vspace{6mm}
+INGENIERO EN SISTEMAS COMPUTACIONALES\\
+\vspace{10mm}
+
+Asesor:\\
+{[Nombre del asesor]}\\
+} \vfill
+	Ciudad Juárez, Chihuahua \hspace{70mm}\today
+
+%{\small \href{https://creativecommons.org/licenses/by/4.0/}{\includegraphics[height=1.2em]{cc-by}} by \theauthor}
+
+\end{center} 
+
+\clearpage
+
+
+
+%\tableofcontents
+\clearpage
+%\listoffigures
+\clearpage
+%\listoftables
+
+\clearpage
+
+%\maketitle
+
+%\begin{abstract} \noindent
+%En la actualidad existen asistentes de voz que son capaces de reconocer comandos o instrucciones a partir de la voz de las personas. Dichos asistentes son usados principalmente para tareas sencillas como búsquedas en Internet o agendas y aún son ineficientes a la hora de reconocer y procesar el contexto en una conversación. En este proyecto se propone implementar un asistente de voz con la capacidad de interpretar el lenguaje natural y seguir una conversación sin salirse de contexto, utilizando \textit{answer sets programming} (ASP). En este documento se muestra la descripción de los asistentes de voz más relevantes actualmente, se da una justificación del proyecto, la metodología, los objetivos generales y el coronograma de actividades a seguir para implementar un prototipo de asistente de voz.
+%\end{abstract}
+
+
+\section*{Introducción}
+
+[Indique de forma clara y coherente en una cuartilla cuál es la nueva contribución, su importancia y por qué es adecuado para sistemas computacionales. Se sugiere para su redacción seguir los cinco pasos siguientes: 1) Establezca el campo de investigación al que pertenece el proyecto, 2) describa los aspectos del problema más que ya han sido estudiado por otros investigadores, 3) explique el área de oportunidad que pretende cubrir el proyecto propuesto, 4) describa el propósito/objetivo del proyecto y 5) proporcione el valor positivo o la justificación para llevar a cabo el proyecto.] 
+\newpage
+
+
+\section{Planteamiento del problema}
+
+% \subsection{Antecedentes}
+\subsection{Sintesis}
+\subsubsection{A Cloud-Based IoT Platform for Precision Control of Soilless Greenhouse Cultivation}
+\begin{itemize}
+    \item \textbf{Problemática: }
+    La falta de agua y de mano de obra especializada ejerce una influencia negativa sobre la agricultura tradicional y la producción de alimentos. El problema empeora en países con tierra árida y clima extremo. Estas caracteristicas contribuyen al amuento de la brecha alimenticia.
+    \item \textbf{Método que proponen (aportación)}: Se propone un sistema basado en la nube y el internet de las cosas para controlar y monitorear el microclima de un invernadero. Se conectaron sensores, actuadores y más controles.
+    \item \textbf{Resultados: } Se aumentó la cantidad de cosecha y la calidad del pepino. Además, se logró ahorrar agua y luz con el control automatizado.
+    \item \textbf{Conclusiones: } El sistema ayudó en el control y monitoreo del invernadero dando resultados tangibles.
+\end{itemize}
+
+\subsubsection{Controlled environment agriculture for effective plant production systems in a semiarid greenhouse}
+\begin{itemize}
+    \item \textbf{Problemática:} Regiones con clima semi-árido tienen gran potencial para la producción de alimentos gracias a que reciben bastante radiación solar a lo largo del año. Sin embargo, estas regiones también presentan desventajas, como lo son las altas temperaturas y la escacez del agua.
+    \item \textbf{Método que proponen (aportación):} La optimización de la ventilación y de la evapotranspiración al utilizar enfriamiento con aspersores ayudará a eficientizar el uso de agua y a crear condiciones más favorables para el desarrollo de las plantas.
+    \item \textbf{Resultados:} Al optimizar ambos parámetros mediante un sistema se logró mantener el invernadero en un clima favorable al utilizar menos agua para lograr el mismo resultado.
+    \item \textbf{Conclusiones:} Se logro controlar el clima del invernadero de manera más eficiente.
+\end{itemize}
+
+\subsubsection{A System for the Monitoring and Predicting of Data in Precision Agriculture in a Rose Greenhouse Based on Wireless Sensor Networks}
+\begin{itemize}
+    \item \textbf{Problemática: }
+    El acceso a tecnología de calidad en la agricultura es costoso. Por esta razón, los sistemas de control y monitoreo en la agricultura 
+	solo han estado disponibles para grandes productores. Esto restringe la posibildad de competencia de pequeños y medianos agricultores 
+	al no poder igualar la calidad del producto. Es necesario que se propongan soluciones de bajo costo para la obtención y el procesamiento 
+	de los datos. Todo esto para poder obtener información que pueda aumentar la productividad en la agricultura.
+    \item \textbf{Método que proponen (aportación): } Para facilitar la recolección de información, se propone una una red inalámbrica de 
+	sensores junto con prácticas adecuadas para el manejo de los datos. A partir de estos datos, los autores plantean que se entrenarán 
+	modelos de inteligencia artificial para predecir el clima del invernadero. 
+    \item \textbf{Resultados:}
+    Distintos modelos de inteligencia artificial lograron predecir con un margen de error de menos del 12\% el clima de un invernadero.
+    \item \textbf{Conclusiones:} El sistema propuesto ayudará de manera permanente a los productores de rosas al facilitar la toma de decisiones basadas en la información. Los ayudará 
+\end{itemize}
+
+\subsubsection{Model predictive control of smart greenhouses as the path towards near zero energy consumption}
+\begin{itemize}
+    \item \textbf{Problemática: }
+    \item \textbf{Método que proponen (aportación): }
+    \item \textbf{Resultados: }
+    \item \textbf{Conclusiones:}
+\end{itemize}
+
+\subsubsection{Model predictive control of smart greenhouses as the path towards near zero energy consumption}
+\begin{itemize}
+    \item \textbf{Problemática: }
+    \item \textbf{Método que proponen (aportación): }
+    \item \textbf{Resultados: }
+    \item \textbf{Conclusiones:}
+\end{itemize}
+
+
+
+\subsection{Definición del problema}
+
+[Es la delimitación clara y precisa de la situación que se quiere resolver o mejorar ubicada dentro del contexto mencionado en los antecedentes.
+De preferencia escribirlo en un solo párrafo y nada más, para que no queden dudas de cuál es el problema.]
+
+
+\section{Justificación}
+
+%Un parrafo debe llevar almenos 2 oraciones
+[Expresa las razones por las cuáles crees/supones es necesario desarrollar el proyecto plasmado en esta propuesta. 
+Deberás describir y dimensionar la necesidad, problema u oportunidad en la cual se centra. 
+Se tiene que establecer la importancia y grado de generalización que puede hacerse de los resultados del proyecto, así como los beneficios derivados de su realización. 
+Aquí deberá incluirse el porqué vale la pena atender el problema, en qué pueden ayudar los resultados, y quiénes se beneficiarán de los mismos. También hay que incluir aquí el impacto que pueda tener en diferentes ámbitos, como el  tecnológico, académico, tecnológico, ecológico, económico,social, ambiental, y así, según corresponda. 
+Se presentan los beneficios que se obtendrían al lograr el objetivo del proyecto de investigación, demostrando por qué es necesario y significativo. 
+Ayuda a identificar las razones que motivan a la realización de este proyecto.]
+\begin{description}
+\item [Impacto Social:] [explica
+\dots]
+
+
+\item [Impacto Tecnológico:]
+[explica
+\dots]
+
+\item [Impacto Académico:] 
+[explica \dots]
+
+\vdots
+
+
+\end{description}
+
+
+\section{Marco teórico}
+%\caption[Texto en lista de figuras sin cita]{Texto en título de imagen con cita.}
+
+[Presentar la teoría que va a fundamentar el proyecto con base en le planteamiento del problema que se ha realizado, los conceptos y conocimientos necesarios para desarrollar el proyecto. Se puede dividir en sub-secciones por cada concepto que se necesite, pero no olvides introducir antes con un párrafo.]
+
+\section{Objetivo general}
+
+[Enunciado que expresa lo que se propone lograr al final del proyecto de investigación. 
+Viene directamente relacionado con el planteamiento del problema y busca ante todo contribuir a solucionarlo. 
+Debe de iniciar con un verbo en infinitivo que exprese una acción medible y alcanzable en un calendario para dos semestres.]
+
+
+\section{Objetivos específicos}
+[Establece los objetivos específicos de la propuesta en forma de lista, lo cuales deben estar relacionados con el Objetivo General. Estos permiten orientar las actividades a realizar, deben ser congruentes entre sí, debidamente jerarquizados, medibles, cuantificables y ser alcanzables, de tal forma que se logre el Objetivo General establecido. Además, deberán iniciar con el verbo principal en infinitivo.
+Es común confundir objetivos Específicos con Metodología: Esta última es una lista de fases o pasos para lograr los objetivos; mientras que estos son características que el producto final deberá exhibir al «usuario final».]
+
+\section{Propuesta de solución}
+
+[Esto se refiere a lo que el usuario final espera recibir.
+Ejemplos de esto pueden ser: un prototipo, un sistema, una biblioteca  (mal llamada ``librería''), un API, un \textit{framework}, un algoritmo, un teorema, un modelo, una metodología; con tales y cuales características.]
+
+
+
+
+\section{Alcances y limitaciones}
+
+[Los alcances nos indican con precisión qué SÍ se puede esperar o cuáles aspectos alcanzaremos en el desarrollo del proyecto; y las limitaciones indican qué aspectos quedan fuera de su cobertura, lo que NO se realizará. 
+En otras palabras, los alcances son las condiciones bajo las cuales tu producto deberá funcionar; y las limitaciones son las condiciones que no cubrirá.]
+
+\section{Metodología}
+[En esta sección se especifican los pasos, basados en el método científico o desarrollo de software, necesarios para alcanzar el objetivo planteado. 
+Cada paso debe de incluir una breve definición, así como una descripción de cómo se realizará.
+Establece de forma organizada y precisa el procedimiento o fases que se han de seguir para llevar a buen término la investigación planteada. 
+Esta debe ser  clara, detallada y consecuente con la realización del proyecto y para el cumplimiento de los objetivos y metas.]
+
+
+
+\section{Programa de Actividades}
+
+[Describe las actividades a realizar y señala los meses necesarios para el logro de las metas establecidas.
+Es un listado que muestra la secuencia de acciones, relacionadas con la metodología, que se prevé llevar a cabo, la duración que tendrán y las fechas en que ocurrirán, demostrando siempre que terminarás en tiempo y forma.]
+
+
+%Agregar dos oraciones a los parrafos
+[De acuerdo a la metodología planteada, se organizan las actividades en base a un periodo de dos semestres correspondientes a la duración del proyecto, cada tarea particular tiene un tiempo aproximado que permita llegar al objetivo de la investigación.
+A continuación se muestra un cronograma de actividades como ejemplo. 
+Además, vale la pena mencionar que existen varios portales en la web donde puedes construir tu tabla \LaTeX de una manera visual, y luego generas y copias el código fuente de la tabla terminada y con estilo a tu documento. Uno de dichos portales es \url{http://www.tablesgenerator.com}]
+
+\begin{table}
+\centering
+\resizebox*{!}{10 cm}{
+\begin{tabular}{|p{4cm}|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+	\hline 
+	&\rotatebox{90}{Agosto 2016}
+	&\rotatebox{90}{Septiembre 2016}
+	&\rotatebox{90}{Octubre 2016} &\rotatebox{90}{Noviembre 2016} &\rotatebox{90}{Diciembre 2016} &\rotatebox{90}{Enero 2017} &\rotatebox{90}{Febrero 2017} &\rotatebox{90}{Marzo 2017} &\rotatebox{90}{Abril 2017} &\rotatebox{90}{Mayo 2017} &\rotatebox{90}{Junio 2017}
+	&\rotatebox{90}{Julio 2017}
+	&\rotatebox{90}{Agosto 2017}
+	&\rotatebox{90}{Septiembre 2017}
+	&\rotatebox{90}{Octubre 2017}
+	&\rotatebox{90}{Noviembre 2017}
+	&\rotatebox{90}{Diciembre 2017}
+	&\rotatebox{90}{Enero 2018}
+	&\rotatebox{90}{Febrero 2018}
+	&\rotatebox{90}{Marzo 2018}
+	&\rotatebox{90}{Abril 2018}
+	&\rotatebox{90}{Mayo 2018}
+	&\rotatebox{90}{Junio 2018}\\
+	\hline
+	
+	Revisión del estado de la técnica&\checkmark 
+	&\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\  
+	\hline 
+	Selección de la plataforma donde funcionará la aplicación&  &  &  &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline 
+	Investigación y aprendizaje de ASP, autómatas a pila y gramáticas&  &  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline 
+	Documentación de propuesta&  &  &  &  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark\\ 
+	\hline 
+	Búsqueda de opciones para reconocimiento de voz&  &  &  &  &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline 
+	Determinar la herramienta para reconocimiento de voz&  &  &  &  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline 
+	Integración del modulo de reconocimiento de voz&  &  &  &  &  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline 
+	Pruebas del módulo de reconocimiento de voz&  &  &  &  &  &  &  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline  
+	Evaluar Freeling y OpenNLP como herramientas para el procesado del lenguaje natural&  &  &  &  &  &  &  &  &\checkmark  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ 
+	 \hline 
+	Análisis módulo de procesado de lenguaje natural&  &  &  &  &  &  &  &  &   &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &  &  &  &  &  &  &\\ 
+	\hline
+	Diseño de módulo de procesado de lenguaje natural&  &  &  &  &  &  &  &  &   &  &  &  & \checkmark &\checkmark  &\checkmark  &  &  &  &  &  &  &  &\\ 
+	\hline  
+	Codificación de módulo de procesado de lenguaje natural&  &  &  &  &  &  &  &  &   &  &  &  &  &  &  &\checkmark  &\checkmark  &\checkmark  &  &  &  &  &\\ 
+	\hline  
+	Pruebas de módulo de procesado de lenguaje natural&  &  &  &  &  &  &  &  &   &  &  &  &  &  &  &  &  &  &\checkmark  &  &  &  &\\ 
+	\hline  
+	Análisis, diseño, codificación y pruebas de las interfaces visuales&  &  &  &  &  &  &  &  &   &  &  &  &  &  &  &  &  &  &  &\checkmark  &\checkmark  &  &\\ 
+	\hline 
+	Integración de los módulos para del prototipo.&  &  &  &  &  &  &  &  &   &  &  &  &  &  &  &  &  &  &  &  &  &\checkmark  &\\ 
+	\hline
+	Pruebas de integración y pruebas funcionales del prototipo.&  &  &  &  &  &  &  &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  &\checkmark\\ 
+	\hline
+	
+\end{tabular}
+}
+    \caption{Actividades a 24 meses}
+    \label{xx}
+\end{table}
+
+
+[A continuación mostramos otro ejemplo:]
+
+\begin{table}[h]
+    \centering
+\resizebox*{!}{8 cm}{
+\begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|c|c|}
+	\hline 
+	ACTIVIDAD&\rotatebox{90}{Febrero 2018}
+	&\rotatebox{90}{Marzo}
+	&\rotatebox{90}{Abril} 
+    &\rotatebox{90}{Mayo} 
+    &\rotatebox{90}{VACACIONES} 
+    &\rotatebox{90}{Agosto} 
+    &\rotatebox{90}{Septiembre} 
+    &\rotatebox{90}{Octubre} 
+    &\rotatebox{90}{Noviembre 2018}\\
+	\hline
+	Revisión de la Literatura&\checkmark 
+	&\checkmark  &\checkmark  &  &  &  &  & &  \\  
+	\hline
+	Protocolo&\checkmark 
+	&\checkmark  &\checkmark  &  &  &  &  & &  \\  
+	\hline 
+	Selección de software existente&  &  &  &\checkmark  &\checkmark  &\checkmark  &  &  &  \\ 
+	\hline 
+	Investigación y aprendizaje de Fuzzy Answer Sets&  &  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  &  & \\ 
+	\hline 
+	Documentación de propuesta&  &  & \checkmark & \checkmark &\checkmark  &\checkmark  &\checkmark  &\checkmark  &\checkmark  \\ 
+	\hline 
+	Formulación de semántica para razonamiento difuso&  &  &  &  &\checkmark  &\checkmark  &  &  &  \\ 
+	\hline 
+	Evaluación de software existente&  &  & \checkmark &  &  &  &  &  &  \\ 
+    \hline
+	Codificación de prototipo&  &  &  &  & \checkmark & \checkmark &  &  &   \\ 
+	\hline  
+	Pruebas de prototipo&  &  &  &  &  &  & \checkmark &  &   \\ 
+	\hline 
+	Presentación y defensa de trabajo&  &  &  &  &  &  &  &  & \checkmark  \\ 
+	\hline
+\end{tabular}}
+    \caption{Actividades a nueve meses}
+    \label{nueve}
+\end{table}
+
+
+
+
+
+[En cuanto a las referencias, estas deberán escribirse en formato de acuerdo a IEEE, y puedes aprovechar el manejo automático de \LaTeX\xspace integrado con Mendeley. Alternativamente las puedes editar a mano (a pie), para lo cual te recomendamos usar un archivo separado, como en esta plantilla el de sample.bib
+Así \cite{Van-Dongen12} es como citamos una referencia de las que vienen en dicho archivo; así \cite{Mittelbach04} es como citamos una secuencia de ellas.]
+
+Esta plantilla fue proveída originalmente por el Dr. Juan Carlos Acosta Guadarrama.
+
+
+\bibliographystyle{ieeetr}
+\bibliography{misreferencias}
+
+
+\clearpage
+\appendix
+
+
+\section{Apéndice}
+[En esta sección opcional se incluye información secundaria o material importante que es muy extenso. El apéndice se coloca después de la literatura citada y no debe llevar introducción ni conclusión ni mayor explicación excepto su título y en el texto donde se hace referencia al apéndice. 
+Ejemplos de información que puede colocarse en el apéndice: código fuente completo, copia del  convenio con la maquila donde les estás desarrollando esta propuesta; una lista de ejemplares y los museos donde están depositados, los datos obtenidos de todas las repeticiones del experimento, derivaciones matemáticas extensas, todos los resultados del análisis estadístico (incluyendo quizás los no significativos) y mapas de distribución para cada caso estudiado. 
+
+
+\end{document}  
