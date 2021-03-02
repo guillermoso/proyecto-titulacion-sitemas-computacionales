@@ -1,27 +1,29 @@
-%!TEX encoding = UTF-8 Unicode
-%!TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
 %% This template licensed under CC-BY-NC-SA by Koenraad De Smedt
 \documentclass[final,12pt]{article}
 \usepackage[margin=24mm]{geometry}
 \usepackage{fontspec,xltxtra,polyglossia,titling,graphicx,dingbat}
-\usepackage{verbatim,gb4e,synttree,multicol} % choose or add what you need   
 \usepackage[colorlinks,urlcolor=blue,citecolor=black,linkcolor=black]{hyperref}
-\setmainfont[Mapping=tex-text]{Times New Roman} % or another similar font
+\setmainfont[Mapping=tex-text]{Times New Roman}
 \setdefaultlanguage{spanish}
-%\setotherlanguages{english}
 \usepackage[numbers]{natbib}
 \usepackage{xspace}
 
 \usepackage[utf8]{inputenc}
 \frenchspacing
-%\newcommand{\checkmark}{x}
 
-\title{[TÍTULO DEL PROYECTO DE INVESTIGACIÓN]} % replace with title of your term paper
-\author{[Nombre del alumno]} % replace with your candidate number, not your name
+\title{[TÍTULO DEL PROYECTO DE INVESTIGACIÓN]}
+\author{[Nombre del alumno]} 
 \date{\today}
 \hyphenation{unicode}
 \usepackage{url}
 \usepackage{hyperref}
+
+% \begin{document}
+ 
+ 
+% \maketitle
 
 \begin{document}
 	\thispagestyle{empty}
@@ -67,27 +69,18 @@ Asesor:\\
 
 \clearpage
 
-
-
-%\tableofcontents
+\tableofcontents
 \clearpage
-%\listoffigures
+\listoffigures
 \clearpage
-%\listoftables
-
+\listoftables
 \clearpage
 
-%\maketitle
-
-%\begin{abstract} \noindent
-%En la actualidad existen asistentes de voz que son capaces de reconocer comandos o instrucciones a partir de la voz de las personas. Dichos asistentes son usados principalmente para tareas sencillas como búsquedas en Internet o agendas y aún son ineficientes a la hora de reconocer y procesar el contexto en una conversación. En este proyecto se propone implementar un asistente de voz con la capacidad de interpretar el lenguaje natural y seguir una conversación sin salirse de contexto, utilizando \textit{answer sets programming} (ASP). En este documento se muestra la descripción de los asistentes de voz más relevantes actualmente, se da una justificación del proyecto, la metodología, los objetivos generales y el coronograma de actividades a seguir para implementar un prototipo de asistente de voz.
-%\end{abstract}
-
-
-\section*{Introducción}
-
-[Indique de forma clara y coherente en una cuartilla cuál es la nueva contribución, su importancia y por qué es adecuado para sistemas computacionales. Se sugiere para su redacción seguir los cinco pasos siguientes: 1) Establezca el campo de investigación al que pertenece el proyecto, 2) describa los aspectos del problema más que ya han sido estudiado por otros investigadores, 3) explique el área de oportunidad que pretende cubrir el proyecto propuesto, 4) describa el propósito/objetivo del proyecto y 5) proporcione el valor positivo o la justificación para llevar a cabo el proyecto.] 
-\newpage
+\begin{abstract} \noindent
+En la actualidad existen asistentes de voz que son capaces de reconocer comandos o instrucciones a partir de la voz de las personas. Dichos asistentes son usados principalmente para tareas sencillas como búsquedas en Internet o agendas y aún son ineficientes a la hora de reconocer y procesar el contexto en una conversación. En este proyecto se propone implementar un asistente de voz con la capacidad de interpretar el lenguaje natural y seguir una conversación sin salirse de contexto, utilizando \textit{answer sets programming} (ASP). En este documento se muestra la descripción de los asistentes de voz más relevantes actualmente, se da una justificación del proyecto, la metodología, los objetivos generales y el coronograma de actividades a seguir para implementar un prototipo de asistente de voz.
+\end{abstract}
+ 
+\include{Tex_files/Intro}
 
 
 \section{Planteamiento del problema}
@@ -103,14 +96,6 @@ Asesor:\\
     \item \textbf{Conclusiones: } El sistema ayudó en el control y monitoreo del invernadero dando resultados tangibles.
 \end{itemize}
 
-\subsubsection{Controlled environment agriculture for effective plant production systems in a semiarid greenhouse}
-\begin{itemize}
-    \item \textbf{Problemática:} Regiones con clima semi-árido tienen gran potencial para la producción de alimentos gracias a que reciben bastante radiación solar a lo largo del año. Sin embargo, estas regiones también presentan desventajas, como lo son las altas temperaturas y la escacez del agua.
-    \item \textbf{Método que proponen (aportación):} La optimización de la ventilación y de la evapotranspiración al utilizar enfriamiento con aspersores ayudará a eficientizar el uso de agua y a crear condiciones más favorables para el desarrollo de las plantas.
-    \item \textbf{Resultados:} Al optimizar ambos parámetros mediante un sistema se logró mantener el invernadero en un clima favorable al utilizar menos agua para lograr el mismo resultado.
-    \item \textbf{Conclusiones:} Se logro controlar el clima del invernadero de manera más eficiente.
-\end{itemize}
-
 \subsubsection{A System for the Monitoring and Predicting of Data in Precision Agriculture in a Rose Greenhouse Based on Wireless Sensor Networks}
 \begin{itemize}
     \item \textbf{Problemática: }
@@ -123,32 +108,98 @@ Asesor:\\
 	modelos de inteligencia artificial para predecir el clima del invernadero. 
     \item \textbf{Resultados:}
     Distintos modelos de inteligencia artificial lograron predecir con un margen de error de menos del 12\% el clima de un invernadero.
-    \item \textbf{Conclusiones:} El sistema propuesto ayudará de manera permanente a los productores de rosas al facilitar la toma de decisiones basadas en la información. Los ayudará 
+    \item \textbf{Conclusiones:} El sistema propuesto ayudará de manera permanente a los productores de rosas al facilitar la toma de decisiones 
+	basadas en la información. Los ayudará 
 \end{itemize}
 
-\subsubsection{Model predictive control of smart greenhouses as the path towards near zero energy consumption}
+\subsubsection{Bayesian networks for greenhouse temperature control}
 \begin{itemize}
     \item \textbf{Problemática: }
+    Hoy en día la agricultura debe apegarse a una cantidad en aumento de regulaciones en términos de calidad e impacto ambiental.
+	La incorporación de nuevas tecnologías en el sector agropecuario pueden servir como ayuda para cumplir con estas regulaciones.
     \item \textbf{Método que proponen (aportación): }
+    Los autores proponen implementar una red bayesiana para predecir los principales parámetros que influyen en el clima interior del invernadero 
+	(temperatura del aire, humedad relativa y concentración de CO2).
     \item \textbf{Resultados: }
+    Se logró realizar un control más homogéneo que con métodos tradicionales, lo cual afecta de una manera favorable al crecimiento del cultivo.
     \item \textbf{Conclusiones:}
+    Se demostró la aplicabilidad de redes bayesianas para el control de la temperatura del aire dentro de un invernadero. Este control se logró
+	al actuar sobre la apertura de compuertas en el invernadero.
 \end{itemize}
 
-\subsubsection{Model predictive control of smart greenhouses as the path towards near zero energy consumption}
+
+\subsubsection{Low-Cost Fuzzy Logic Control for Greenhouse Environments with Web Monitoring}
 \begin{itemize}
     \item \textbf{Problemática: }
+    Hoy en día la agricultura debe apegarse a una cantidad en aumento de regulaciones en términos de calidad e impacto ambiental.
+	La incorporación de nuevas tecnologías en el sector agropecuario pueden servir como ayuda para cumplir con estas regulaciones.
     \item \textbf{Método que proponen (aportación): }
+    Los autores proponen implementar una red bayesiana para predecir los principales parámetros que influyen en el clima interior del invernadero 
+	(temperatura del aire, humedad relativa y concentración de CO2).
     \item \textbf{Resultados: }
+    Se logró realizar un control más homogéneo que con métodos tradicionales, lo cual afecta de una manera favorable al crecimiento del cultivo.
     \item \textbf{Conclusiones:}
+    Se demostró la aplicabilidad de redes bayesianas para el control de la temperatura del aire dentro de un invernadero. Este control se logró
+	al actuar sobre la apertura de compuertas en el invernadero.
 \end{itemize}
 
+\newpage
+\section{Antecedentes}
+
+"La agricultura es la base de la economía en muchos países, esta provee a la humanidad de algunas de sus necesidades más básicas: comida y fibra" \cite{appsremotesensing}. 
+La demanda de comida y productos derivados de la agricultura está proyectada a incrementar en un 70\% para el año 2050 \cite{wik_pingali_brocai_2008}. 
+La agricultura de precisión (PA por sus siglas en inglés) será clave para poder alcanzar la agricultura sustentable. La PA se puede definir como una 
+estrategia de manejo que implementa la recopilación de información, comunicación entre sistemas y técnicas de análisis de datos para apoyar la toma 
+de decisiones, por ejemplo: aplicación de fertilizantes, control de plagas, control de riego, identificación de enfermedades, entre otros \cite{appsremotesensing}.
+
+La comunicación inalámbrica entre sistemas ha cambiado los estándares de comunicación a día de hoy y la agricultura no se ha quedado atrás. 
+"Para incrementar la eficiencia, productividad y reducir la intervención humana, tiempo y costo existe una necesidad de prestar atención a una
+nueva tecnología llamada Internet de las Cosas (\textit{IoT} por sus siglas en inglés)" \cite{agriculture_automation_review}. El IoT es la red de dispositivos 
+que adquieren y actúan sobre información sin la necesidad de que un humano intervenga \cite{agriculture_automation_review}. 
+
+Los principales componentes de un sistema basado en \textit{IoT} se pueden dividir en 4 capas: dispositivos, red, servicios y aplicación. 
+El \textit{hardware} a implementar es de suma importancia debido a que impacta directamente el costo de la implementación y restringe 
+las tecnologías disponibles. Entre los dispositivos más utilizados están los diferentes Arduinos, Raspberry Pis y el microcontrolador ESP. 
+Los datos obtenidos a través de estos dispositivos son (en su mayoría) enviados a una ubicación central a través de una red alámbrica o inalámbrica.
+Los principales protocolos de red implementados en las redes inalámbricas son: Wi-Fi, Bluetooth, Zigbee y LoRaWAN \cite{systematicreviewiot}. 
+
+En \cite{olive_orchard_monitorization} se implementó una red inalámbrica de sensores de bajo costo para monitorear la temperatura, humedad y concentración de gases 
+del ambiente, además de la humedad del suelo en una plantación de olivos. Se utilizó el sensor DHT 11 para monitorear la temperatura y humedad del ambiente, un
+higrómetro para medir la humedad del suelo y un MQ-135 para detectar gases nocivos (CO2, amoniaco, benzeno, alcohol y humo del fuego). Cada nodo de esta 
+red cuenta con los sensores para realizar las lecturas mencionadas, un microcontrolador y una antena para habilitar la comunicación mediante el protocolo 
+LoRaWAN, todo alimentado por celdas fotovoltaicas. Para el monitoreo de las lecturas, se desarrollaron una aplicación móvil y una interfaz web que 
+muestran los datos en tiempo real.
+
+Es importante monitorear de forma separada la humedad del ambiente como la humedad del suelo debido a que estas no están correlacionadas. Ambas se relacionan
+a enfermedades y plagas, sin embargo, la humedad del ambiente influye en la aparición de enfermedades y la humedad del suelo en la aparición de plagas. También
+es muy valioso contar con mediciones de temperatura cerca del cultivo. De esta manera se tienen datos más precisos que los que proveen los sitios/aplicaciones 
+meteorológicas \cite{olive_orchard_monitorization}.
+
+En la Universidad de Magdalena, Colombia se creó un sistema de bajo costo para monitoreo y control remoto de un invernadero utilizando lógica difusa \cite{low_cost_fuzzy_logic_greenhouse}. La utilización de lógica difusa en sistemas de control permite traducir variables a sets previamente definidos que contienen la 
+terminología difusa como muy frío, frío, caliente, muy caliente, etcétera. Gracias a esta traducción se pueden tomar acciones más precisas para realizar el control \cite{agriculture_automation_review}. El algoritmo difuso se implementó en un Arduino Mega para tomar acciones de control sobre la temperatura y humedad del ambiente, humedad del suelo e iluminación. Además, se diseño un sitio web para realizar el monitoreo y poder tomar acciones que sobre escriban a las decisiones tomadas por el sistema. Se probó la efectividad de la lógica difusa para controlar sistemas no lineales, además de optimizar el uso de recursos en un invernadero \cite{low_cost_fuzzy_logic_greenhouse}.
 
 
+
+\newpage
 \subsection{Definición del problema}
 
-[Es la delimitación clara y precisa de la situación que se quiere resolver o mejorar ubicada dentro del contexto mencionado en los antecedentes.
-De preferencia escribirlo en un solo párrafo y nada más, para que no queden dudas de cuál es el problema.]
+% Sistema de control y monitoreo de un invernadero basado en el Internet de las cosas y logica difusa
 
+La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto dificulta que los agricultores
+locales puedan competir contra extranjeros que producen en ambientes controlados y automatizados, ya que no pueden igualar ni la calidad 
+del producto ni la cantidad producida. Lamentablemente, esto afecta aún más a pequeños y medianos productores ya que los sistemas de control 
+y monitoreo son muy costosos.
+
+% La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto impacta de forma negativa a los 
+% productores de pequeña o mediana escala ya que no cuentan con las herramientas para tomar decisiones basadas en información. Al no contar con 
+% información, el replicar resultados en temporada tras temporada es complicado.
+
+% Una toma de decisiones informada ayudará a los agricultores a utilizar de una forma más eficiente sus recursos, disminuyendo el costo de producción. 
+% Además, al llevar sistematizar la producción se tendrán resultados replicables temporada tras temporada.
+
+\subsection{Objetivo}
+
+Implementar un sistema de bajo costo para controlar y monitorear el clima de un invernadero.
 
 \section{Justificación}
 
@@ -337,13 +388,14 @@ Además, vale la pena mencionar que existen varios portales en la web donde pued
 
 
 [En cuanto a las referencias, estas deberán escribirse en formato de acuerdo a IEEE, y puedes aprovechar el manejo automático de \LaTeX\xspace integrado con Mendeley. Alternativamente las puedes editar a mano (a pie), para lo cual te recomendamos usar un archivo separado, como en esta plantilla el de sample.bib
-Así \cite{Van-Dongen12} es como citamos una referencia de las que vienen en dicho archivo; así \cite{Mittelbach04} es como citamos una secuencia de ellas.]
+% Así \cite{Van-Dongen12} es como citamos una referencia de las que vienen en dicho archivo; así \cite{Mittelbach04} es como citamos una secuencia de ellas.]
 
 Esta plantilla fue proveída originalmente por el Dr. Juan Carlos Acosta Guadarrama.
 
 
+\bibliography{references/misreferencias}
 \bibliographystyle{ieeetr}
-\bibliography{misreferencias}
+% \renewcommand*{\UrlFont}{\rmfamily}
 
 
 \clearpage
@@ -354,5 +406,5 @@ Esta plantilla fue proveída originalmente por el Dr. Juan Carlos Acosta Guadarr
 [En esta sección opcional se incluye información secundaria o material importante que es muy extenso. El apéndice se coloca después de la literatura citada y no debe llevar introducción ni conclusión ni mayor explicación excepto su título y en el texto donde se hace referencia al apéndice. 
 Ejemplos de información que puede colocarse en el apéndice: código fuente completo, copia del  convenio con la maquila donde les estás desarrollando esta propuesta; una lista de ejemplares y los museos donde están depositados, los datos obtenidos de todas las repeticiones del experimento, derivaciones matemáticas extensas, todos los resultados del análisis estadístico (incluyendo quizás los no significativos) y mapas de distribución para cada caso estudiado. 
 
-
-\end{document}  
+ 
+\end{document}
