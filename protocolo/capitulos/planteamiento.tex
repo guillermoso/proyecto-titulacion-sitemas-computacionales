@@ -1,0 +1,64 @@
+\section{Planteamiento del problema}
+
+\subsection{Antecedentes}
+
+"La agricultura es la base de la economía en muchos países, esta provee a la humanidad de algunas de sus necesidades más básicas: comida y fibra" \cite{appsremotesensing}. 
+La demanda de comida y productos derivados de la agricultura está proyectada a incrementar en un 70\% para el año 2050 \cite{wik_pingali_brocai_2008}. 
+La agricultura de precisión (PA por sus siglas en inglés) será clave para poder alcanzar la agricultura sustentable. La PA se puede definir como una 
+estrategia de manejo que implementa la recopilación de información, comunicación entre sistemas y técnicas de análisis de datos para apoyar la toma 
+de decisiones, por ejemplo: aplicación de fertilizantes, control de plagas, control de riego, identificación de enfermedades, entre otros \cite{appsremotesensing}.
+
+La comunicación inalámbrica entre sistemas ha cambiado los estándares de comunicación a día de hoy y la agricultura no se ha quedado atrás. 
+"Para incrementar la eficiencia, productividad y reducir la intervención humana, tiempo y costo existe una necesidad de prestar atención a una
+nueva tecnología llamada Internet de las Cosas (\textit{IoT} por sus siglas en inglés)" \cite{agriculture_automation_review}. El IoT es la red de dispositivos 
+que adquieren y actúan sobre información sin la necesidad de que un humano intervenga \cite{agriculture_automation_review}. 
+
+Los principales componentes de un sistema basado en \textit{IoT} se pueden dividir en 4 capas: dispositivos, red, servicios y aplicación. 
+El \textit{hardware} a implementar es de suma importancia debido a que impacta directamente el costo de la implementación y restringe 
+las tecnologías disponibles. Entre los dispositivos más utilizados están los diferentes Arduinos, Raspberry Pis y el microcontrolador ESP. 
+Los datos obtenidos a través de estos dispositivos son (en su mayoría) enviados a una ubicación central a través de una red alámbrica o inalámbrica.
+Los principales protocolos de red implementados en las redes inalámbricas son: Wi-Fi, Bluetooth, Zigbee y LoRaWAN \cite{systematicreviewiot}. 
+
+En \cite{olive_orchard_monitorization} se implementó una red inalámbrica de sensores de bajo costo para monitorear la temperatura, humedad y concentración de gases 
+del ambiente, además de la humedad del suelo en una plantación de olivos. Se utilizó el sensor DHT 11 para monitorear la temperatura y humedad del ambiente, un
+higrómetro para medir la humedad del suelo y un MQ-135 para detectar gases nocivos (CO2, amoniaco, benzeno, alcohol y humo del fuego). Cada nodo de esta 
+red cuenta con los sensores para realizar las lecturas mencionadas, un microcontrolador y una antena para habilitar la comunicación mediante el protocolo 
+LoRaWAN, todo alimentado por celdas fotovoltaicas. Para el monitoreo de las lecturas, se desarrollaron una aplicación móvil y una interfaz web que 
+muestran los datos en tiempo real.
+
+Es importante monitorear de forma separada la humedad del ambiente como la humedad del suelo debido a que estas no están correlacionadas. Ambas se relacionan
+a enfermedades y plagas, sin embargo, la humedad del ambiente influye en la aparición de enfermedades y la humedad del suelo en la aparición de plagas. También
+es muy valioso contar con mediciones de temperatura cerca del cultivo. De esta manera se tienen datos más precisos que los que proveen los sitios/aplicaciones 
+meteorológicas \cite{olive_orchard_monitorization}.
+
+En la Universidad de Magdalena, Colombia se creó un sistema de bajo costo para monitoreo y control remoto de un invernadero utilizando lógica difusa \cite{low_cost_fuzzy_logic_greenhouse}. La utilización de lógica difusa en sistemas de control permite traducir variables a sets previamente definidos que contienen la 
+terminología difusa como muy frío, frío, caliente, muy caliente, etcétera. Gracias a esta traducción se pueden tomar acciones más precisas para realizar el control \cite{agriculture_automation_review}. El algoritmo difuso se implementó en un Arduino Mega para tomar acciones de control sobre la temperatura y humedad del ambiente, humedad del suelo e iluminación. Además, se diseño un sitio web para realizar el monitoreo y poder tomar acciones que sobre escriban a las decisiones tomadas por el sistema. Se probó la efectividad de la lógica difusa para controlar sistemas no lineales, además de optimizar el uso de recursos en un invernadero \cite{low_cost_fuzzy_logic_greenhouse}.
+
+% buscar antecedentes de sistemas existentes que sean costosos para que la metrica sea el bajo costo del objetivo
+
+\subsection{Definición del problema}
+
+% si el objetivo es disminuir el costo aqui puedo argumentar que el costo de sistemas es muy alto
+% restringir las afirmaciones que se hagan a donde se implementara el invernadero. Usar encuestas del proyecto de PITI para demostrar que las personas de
+
+%% Sistema de control y monitoreo de un invernadero basado en el Internet de las cosas y logica difusa
+
+
+
+% problema de investigacion, no del contexto. No esta ligado directamente al objetivo
+La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto dificulta que los agricultores
+locales puedan competir contra extranjeros que producen en ambientes controlados y automatizados, ya que no pueden igualar ni la calidad 
+del producto ni la cantidad producida. Lamentablemente, esto afecta aún más a pequeños y medianos productores ya que los sistemas de control 
+y monitoreo son muy costosos.
+
+% La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto impacta de forma negativa a los 
+% productores de pequeña o mediana escala ya que no cuentan con las herramientas para tomar decisiones basadas en información. Al no contar con 
+% información, el replicar resultados en temporada tras temporada es complicado.
+
+% Una toma de decisiones informada ayudará a los agricultores a utilizar de una forma más eficiente sus recursos, disminuyendo el costo de producción. 
+% Además, al llevar sistematizar la producción se tendrán resultados replicables temporada tras temporada.
+
+\subsection{Objetivo}
+% lo que diga mi objetivo tiene que resolver mi problema al 100% - Como medir el resultado? 
+% Utilizando tecnicas de logica difusa
+Implementar un sistema de bajo costo para controlar y monitorear el clima de un invernadero utilizando técnicas de lógica difusa.
