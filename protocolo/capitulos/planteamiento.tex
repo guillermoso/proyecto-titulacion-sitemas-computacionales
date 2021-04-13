@@ -1,77 +1,55 @@
 \section{Planteamiento del problema}
 
+"La agricultura es la base de la economía en muchos países, esta provee a la humanidad de algunas de sus necesidades más básicas: comida y fibra" \cite{appsremotesensing}. La demanda de comida y productos derivados de la agricultura está proyectada a incrementar en un 70\% para el año 2050 \cite{wik_pingali_brocai_2008}. La agricultura de precisión (PA por sus siglas en inglés) es clave para poder alcanzar la agricultura sustentable. La PA se puede definir como una estrategia de manejo que implementa la recopilación de información, comunicación entre sistemas y técnicas de análisis de datos para apoyar la toma de decisiones, por ejemplo: aplicación de fertilizantes, control de plagas, control de riego, identificación de enfermedades, entre otros \cite{appsremotesensing}.
+
+Actualmente existen varios sistemas en el mercado para el control y monitoreo de invernaderos o cuartos de producción. Los sistemas básicos ofrecen monitoreo de temperatura, humedad, CO2, e intensidad de la luz, con un costo de \$2,159.90 USD y \$2,351.00 USD respectivamente \cite{intelliclimate_kit_2021}, \cite{smartbee_kit_2021}. Ambos sistemas se pueden conectar a internet para realizar un monitoreo remoto, alertar cuando las condiciones salgan de los límites definidos e iniciar las acciones correctivas correspondientes, sin embargo, \cite{intelliclimate_kit_2021} necesitará una interfaz y una subscripción extra, añadiendo \$279.00 USD al costo. 
+
+Existen otras alternativas, sin embargo, estas ofrecen un servicio similar excepto a escala industrial \cite{ceres_greenhouse_solutions_2021}, \cite{autogrow_climate_control_2021}, \cite{climate_control_2021}. Debido a su mercado objetivo, estos sistemas industriales solo ofrecen cotizaciones a clientes potenciales.
+
+En junio de 2020 se realizó una encuesta (\ref{encuesta}) en la que participó un grupo de agricultores de escala pequeña y mediana, ubicados en Samalayuca, Chihuahua. El 87.6\% de los sondeados no cuentan con un sistema de riego automatizado. Al 76.1\% les gustaría un sistema de ventilación automatizado. Los primeros tres parámetros que se consideraron más importantes de monitorear fueron los siguientes: temperatura del ambiente, humedad del ambiente y la humedad del suelo. Al 84.1\% les gustaría controlar y monitorear sus cultivos desde su teléfono o computadora, sin embargo, casi el 90\% de los encuestados no están dispuestos a adquirir un sistema a costo del mercado.
+
+%FIXME: agregar un parrafo intermedio
+
+La comunicación inalámbrica entre sistemas ha cambiado los estándares de comunicación al día de hoy y la agricultura no se ha quedado atrás. "Para incrementar la eficiencia, productividad y reducir la intervención humana, tiempo y costo existe una necesidad de prestar atención a una nueva tecnología llamada Internet de las Cosas (\textit{IoT} por sus siglas en inglés)" \cite{agriculture_automation_review}. El IoT es la red de dispositivos que adquieren y actúan sobre información sin la necesidad de que un humano intervenga \cite{agriculture_automation_review}. 
+
+Los principales componentes de un sistema basado en \textit{IoT} se pueden dividir en 4 capas: dispositivos, red, servicios y aplicación. El \textit{hardware} a implementar es de suma importancia debido a que impacta directamente el costo de la implementación y restringe las tecnologías disponibles. Entre los dispositivos más utilizados están los diferentes Arduinos, Raspberry Pis y el microcontrolador ESP. Los datos obtenidos a través de estos dispositivos son (en su mayoría) enviados a una ubicación central a través de una red alámbrica o inalámbrica. Los principales protocolos de red implementados en las redes inalámbricas son: Wi-Fi, Bluetooth, Zigbee y LoRaWAN \cite{systematicreviewiot}. 
+
 \subsection{Antecedentes}
 
-"La agricultura es la base de la economía en muchos países, esta provee a la humanidad de algunas de sus necesidades más básicas: comida y fibra" \cite{appsremotesensing}. 
-La demanda de comida y productos derivados de la agricultura está proyectada a incrementar en un 70\% para el año 2050 \cite{wik_pingali_brocai_2008}. 
-La agricultura de precisión (PA por sus siglas en inglés) será clave para poder alcanzar la agricultura sustentable. La PA se puede definir como una 
-estrategia de manejo que implementa la recopilación de información, comunicación entre sistemas y técnicas de análisis de datos para apoyar la toma 
-de decisiones, por ejemplo: aplicación de fertilizantes, control de plagas, control de riego, identificación de enfermedades, entre otros \cite{appsremotesensing}.
+% red inalambrica de bajo costo para el monitoreo de una plantación de olivos
+En \cite{olive_orchard_monitorization} se implementó una red inalámbrica de sensores de bajo costo para monitorear la temperatura, humedad y concentración de gases del ambiente, además de la humedad del suelo en una plantación de olivos. Se utilizó el sensor DHT 11 para monitorear la temperatura y humedad del ambiente, un higrómetro para medir la humedad del suelo y un MQ-135 para detectar gases nocivos (CO2, amoniaco, benzeno, alcohol y humo del fuego). Cada nodo de esta red cuenta con los sensores para realizar las lecturas mencionadas, un microcontrolador (ESP8266) y una antena para habilitar la comunicación mediante el protocolo LoRaWAN, todo alimentado por celdas fotovoltaicas. Para el monitoreo de las lecturas, se desarrollaron una aplicación móvil y una interfaz web que muestran los datos en tiempo real.
 
-Actualmente existen varios sistemas en el mercado para el control y monitoreo de invernaderos o cuartos de producción. Estos sistemas ofrecen monitoreo de temperatura, humedad, CO2, 
-e intensidad de la luz, con un costo de \$2,159.90 USD y \$2,351.00 USD respectivamente \cite{intellidose_kit_2021}, \cite{smartbee_kit_2021}. Ambos sistemas se pueden conectar 
-a internet para realizar un monitoreo remoto, donde \cite{intellidose_kit_2021} necesitará una interfaz y una subscripción extra, añadiendo \$279.00 USD al costo. Existen otras 
-alternativas, como \cite{ceres_greenhouse_solutions_2021}, \cite{autogrow_climate_control_2021}, \cite{climate_control_2021} 
-% hacer u custom quote a esas citas
+Es importante monitorear de forma separada la humedad del ambiente como la humedad del suelo debido a que estas no están correlacionadas. Ambas se relacionan a enfermedades y plagas, sin embargo, la humedad del ambiente influye en la aparición de enfermedades y la humedad del suelo en la aparición de plagas. También es muy valioso contar con mediciones de temperatura cerca del cultivo. De esta manera se tienen datos más precisos que los que proveen los sitios/aplicaciones meteorológicas \cite{olive_orchard_monitorization}.
 
-La comunicación inalámbrica entre sistemas ha cambiado los estándares de comunicación a día de hoy y la agricultura no se ha quedado atrás. 
-"Para incrementar la eficiencia, productividad y reducir la intervención humana, tiempo y costo existe una necesidad de prestar atención a una
-nueva tecnología llamada Internet de las Cosas (\textit{IoT} por sus siglas en inglés)" \cite{agriculture_automation_review}. El IoT es la red de dispositivos 
-que adquieren y actúan sobre información sin la necesidad de que un humano intervenga \cite{agriculture_automation_review}. 
+% red inalambrica de bajo costo para monitorear gases de invernadero
+Asimismo, en \cite{wsn_greenhouse_gases}, se desarrolló una red inalámbrica de sensores. Sin embargo, esta vez se utilizó para monitorear la temperatura y la concentración de gases dentro de un invernadero. La red consistió de dos nodos y una computadora central, comunicándose a través del protocolo ZigBee. Los nodos de la red consisten de un sensor de temperatura, sensores de monóxido de carbono, dióxido de carbono y metano para el monitoreo de gases, un transmisor ZigBee y un GPS (integrado en el transmisor). Ambos nodos fueron capaces de realizar lecturas de los sensores gracias un microcontrolador (Arduino uno). La computadora central consistió del mismo microcontrolador y un recibidor del protocolo ZigBee para recolectar los datos de los nodos. Estos datos se guardan en una base de datos de MySQL. El monitoreo de los datos se realiza en tiempo real a través de una página web.
 
-Los principales componentes de un sistema basado en \textit{IoT} se pueden dividir en 4 capas: dispositivos, red, servicios y aplicación. 
-El \textit{hardware} a implementar es de suma importancia debido a que impacta directamente el costo de la implementación y restringe 
-las tecnologías disponibles. Entre los dispositivos más utilizados están los diferentes Arduinos, Raspberry Pis y el microcontrolador ESP. 
-Los datos obtenidos a través de estos dispositivos son (en su mayoría) enviados a una ubicación central a través de una red alámbrica o inalámbrica.
-Los principales protocolos de red implementados en las redes inalámbricas son: Wi-Fi, Bluetooth, Zigbee y LoRaWAN \cite{systematicreviewiot}. 
-
-En \cite{olive_orchard_monitorization} se implementó una red inalámbrica de sensores de bajo costo para monitorear la temperatura, humedad y concentración de gases 
-del ambiente, además de la humedad del suelo en una plantación de olivos. Se utilizó el sensor DHT 11 para monitorear la temperatura y humedad del ambiente, un
-higrómetro para medir la humedad del suelo y un MQ-135 para detectar gases nocivos (CO2, amoniaco, benzeno, alcohol y humo del fuego). Cada nodo de esta 
-red cuenta con los sensores para realizar las lecturas mencionadas, un microcontrolador y una antena para habilitar la comunicación mediante el protocolo 
-LoRaWAN, todo alimentado por celdas fotovoltaicas. Para el monitoreo de las lecturas, se desarrollaron una aplicación móvil y una interfaz web que 
-muestran los datos en tiempo real.
-
-Es importante monitorear de forma separada la humedad del ambiente como la humedad del suelo debido a que estas no están correlacionadas. Ambas se relacionan
-a enfermedades y plagas, sin embargo, la humedad del ambiente influye en la aparición de enfermedades y la humedad del suelo en la aparición de plagas. También
-es muy valioso contar con mediciones de temperatura cerca del cultivo. De esta manera se tienen datos más precisos que los que proveen los sitios/aplicaciones 
-meteorológicas \cite{olive_orchard_monitorization}.
-
-En la Universidad de Magdalena, Colombia se creó un sistema de bajo costo para monitoreo y control remoto de un invernadero utilizando lógica difusa 
-\cite{low_cost_fuzzy_logic_greenhouse}. La utilización de lógica difusa en sistemas de control permite traducir variables a sets previamente definidos que contienen la 
-terminología difusa como muy frío, frío, caliente, muy caliente, etcétera. Gracias a esta traducción se pueden tomar acciones más precisas para realizar el 
-control \cite{agriculture_automation_review}. El algoritmo difuso se implementó en un Arduino Mega para tomar acciones de control sobre la temperatura y humedad 
-del ambiente, humedad del suelo e iluminación. Además, se diseño un sitio web para realizar el monitoreo y poder tomar acciones que sobre escriban a las decisiones 
-tomadas por el sistema. Se probó la efectividad de la lógica difusa para controlar sistemas no lineales, además de optimizar el uso de recursos en un 
+% sistema de bajo costo con logica difusa
+En la Universidad de Magdalena, Colombia se creó un sistema de bajo costo para monitoreo y control remoto de un invernadero utilizando lógica difusa \cite{low_cost_fuzzy_logic_greenhouse}. La utilización de lógica difusa en sistemas de control permite traducir variables a conjuntos previamente definidos que contienen la terminología difusa como muy frío, frío, caliente, muy caliente, etcétera. Gracias a esta traducción se pueden tomar acciones más precisas para realizar el control \cite{agriculture_automation_review}. El algoritmo difuso se implementó en un microcontrolador (Arduino Mega) para tomar acciones de control sobre la temperatura y humedad del ambiente, humedad del suelo e iluminación. Además, se diseño un sitio web para realizar el monitoreo y poder tomar acciones que sobre escriban a las decisiones tomadas por el sistema. Se probó la efectividad de la lógica difusa para controlar sistemas no lineales, además de optimizar el uso de recursos en un 
 invernadero \cite{low_cost_fuzzy_logic_greenhouse}.
 
-% agregar mas antecedentes
+% sistema de control para un cultivo hidroponico con logica difusa
+En \cite{fuzzy_logic_controller} se desarrolló un sistema para controlar, mediante técnicas de lógica difusa, la cantidad, el pH y la conductividad eléctrica (EC) de la solución nutritiva y la temperatura del ambiente de un cultivo hidropónico. Todas las variables mencionadas anteriormente se tomaron en cuenta para definir los conjuntos difusos. Después de determinar el grado de pertenencia de cada lectura dentro su correspondiente conjunto, se toman acciones de corta, mediana y larga duración, así como no tomar acción alguna si es que las lecturas están dentro de los rangos aceptables. La duración de la acción determina el tiempo que se tomará para ajustar el parámetro. Por ejemplo, si el pH de la solución es muy ácido y el nivel del agua es muy alto, se determina que se tomará una acción de larga duración para aumentar el pH de la solución ya que se necesita una mayor cantidad de líquido ajustador para afectar el pH de un mayor volumen de solución. 
 
-% buscar antecedentes de sistemas existentes que sean costosos para que la metrica sea el bajo costo del objetivo
+Este sistema de control \cite{fuzzy_logic_controller} se basó en sensores y microcontroladores de bajo costo. Se utilizó un Arduino uno para realizar las mediciones, el control difuso y el envío de datos a un ESP8266 para que este envíe los datos a través de internet a un servidor en la nube.
 
+En una investigación conjunta entre la Universidad Sains y Universidad de tecnología MARA de Malasia \cite{fuzzy_systems_agriculture}, se desarrolló un prototipo para automatizar el riego de un cultivo basado en lógica difusa. El monitoreo de parámetros se realizó a través de una red inalámbrica de sensores. Esta red se conformó por 3 nodos, un controlador maestro, un nodo para monitorear la cantidad de agua disponible en un depósito y un controlador para activar o desactivar la bomba de agua que activa el riego. El controlador maestro es el que se encarga de realizar el control difuso. Las entradas de las reglas difusas son las siguientes: humedad relativa, temperatura del ambiente y humedad del suelo. Después de la evaluación de las reglas, se obtiene el tiempo de riego (corto, mediano o largo) dentro del rango de 0 a 15 segundos. En caso de que no haya agua en el depósito, no se activará el riego.
+
+% TODO: agregar el último antecedente  \ref{fuzzy_greenhouse_experimentaly_validated}
+
+\newpage
 \subsection{Definición del problema}
+El costo de los sistemas que se encuentran en el mercado supera en 300\% lo que los agricultores encuestados de Samalayuca, Chihuahua, están dispuestos a pagar. El no contar con un sistema de control y monitoreo dificulta que los agricultores locales puedan competir contra extranjeros que producen en ambientes controlados y automatizados, ya que no pueden igualar ni la calidad del producto ni la cantidad producida.
 
-% si el objetivo es disminuir el costo aqui puedo argumentar que el costo de sistemas es muy alto
-% restringir las afirmaciones que se hagan a donde se implementara el invernadero. Usar encuestas del proyecto de PITI para demostrar que las personas de
+\subsection{Objetivos}
 
-%% Sistema de control y monitoreo de un invernadero basado en el Internet de las cosas y logica difusa
+\subsubsection{Objetivo general}
+Desarrollar un sistema de bajo costo para controlar y monitorear el clima de un invernadero, ubicado en el rancho El Sufrido, Samalayuca, utilizando técnicas de lógica difusa.
 
-
-
-% problema de investigacion, no del contexto. No esta ligado directamente al objetivo
-La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto dificulta que los agricultores
-locales puedan competir contra extranjeros que producen en ambientes controlados y automatizados, ya que no pueden igualar ni la calidad 
-del producto ni la cantidad producida. Lamentablemente, esto afecta aún más a pequeños y medianos productores ya que los sistemas de control 
-y monitoreo son muy costosos.
-
-% La agricultura en Samalayuca, Chihuahua, se basa, en su mayoría, en métodos tradicionales o populares. Esto impacta de forma negativa a los 
-% productores de pequeña o mediana escala ya que no cuentan con las herramientas para tomar decisiones basadas en información. Al no contar con 
-% información, el replicar resultados en temporada tras temporada es complicado.
-
-% Una toma de decisiones informada ayudará a los agricultores a utilizar de una forma más eficiente sus recursos, disminuyendo el costo de producción. 
-% Además, al llevar sistematizar la producción se tendrán resultados replicables temporada tras temporada.
-
-\subsection{Objetivo}
-% lo que diga mi objetivo tiene que resolver mi problema al 100% - Como medir el resultado? 
-% Utilizando tecnicas de logica difusa
-Implementar un sistema de bajo costo para controlar y monitorear el clima de un invernadero utilizando técnicas de lógica difusa.
+\subsubsection{Objetivos específicos}
+\begin{itemize}
+	\item Desarrollar una red inalámbrica de sensores de bajo costo para monitorear el clima de un invernadero.
+	\item Crear un API para guardar y analizar los datos obtenidos de los sensores.
+	\item Automatizar el control del mismo utilizando técnicas de lógica difusa.
+	\item Diseñar una interfaz gráfica para monitorear y controlar el clima de un invernadero de forma remota.
+\end{itemize}
