@@ -11,7 +11,7 @@
 
 \frenchspacing
 \hyphenation{unicode}
-
+%FIXME: todas las figuras se citan con F mayuscula
 \date{\today}
 % el titulo debe ir orientado a que sera en la region de samalayuca
 \title{[TÍTULO DEL PROYECTO DE INVESTIGACIÓN]}
@@ -30,14 +30,15 @@
 % \clearpage
 
 % \include{capitulos/resumen}
-% \include{capitulos/intro}
+\include{capitulos/intro}
 \include{capitulos/planteamiento}
+\include{capitulos/objetivos}
 \input{capitulos/justificacion}
 \input{capitulos/propuesta_solucion}
 \include{capitulos/marco_teorico}
 % \include{capitulos/alcance}
 % \include{capitulos/metodologia}
-% \include{capitulos/actividades}
+\include{capitulos/actividades}
 
 \bibliography{referencias}
 \bibliographystyle{ieeetr}
