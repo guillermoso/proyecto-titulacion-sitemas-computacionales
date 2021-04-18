@@ -1,0 +1,76 @@
+<mxfile>
+    <diagram id="bfjsuotN-IEY3EJmHeWZ" name="Page-1">
+        <mxGraphModel dx="868" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;fontColor=#0066CC;" parent="1" vertex="1">
+                    <mxGeometry x="378.51" y="230" width="52.98" height="71.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Computadora central&lt;br&gt;del invernadero" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="190.9" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="240.9" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=-210;" parent="1" vertex="1">
+                    <mxGeometry x="520.51" y="180" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=-165;" parent="1" vertex="1">
+                    <mxGeometry x="520.51" y="290.9" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point;strokeColor=none;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="570.51" y="310.9" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point;strokeColor=none;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="570.51" y="150" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Nodo 4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="570.51" y="370" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Nodo 5" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="570.51" y="209.1" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Envío de lecturas de&amp;nbsp;&lt;br&gt;sensores a través de&lt;br&gt;peticiones HTTPS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="235" y="130" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="La computadora central actúa&lt;br&gt;como punto de acceso" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="204" y="301.79999999999995" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=-179;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="240.9" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=90;" vertex="1" parent="1">
+                    <mxGeometry x="378.51" y="321.79999999999995" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=-120;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="360.9" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point;strokeColor=none;fillColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="460.51" y="410" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Nodo 3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="460.51" y="469.1" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=-51;" vertex="1" parent="1">
+                    <mxGeometry x="279" y="350" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point;strokeColor=none;fillColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="229" y="379.1" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Nodo 2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="229" y="440" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point;strokeColor=none;fillColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="178.51" y="168.2" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Nodo 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="178.51" y="230" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.enterprise.wireless_connection;fillColor=#4D4D4D;rotation=30;" vertex="1" parent="1">
+                    <mxGeometry x="238.51" y="203.20000000000002" width="42" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,85 @@
+<mxfile>
+    <diagram id="ocsLQtG9YF5jaEsVKmDv" name="Page-1">
+        <mxGraphModel dx="1108" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-1" value="Servidor en la nube (VPS)" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="60" width="480" height="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=110;exitDy=100;exitPerimeter=0;entryX=0;entryY=0.526;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="XNqXfJFGpNn65cFP6wOG-7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="460" y="221" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="460" y="260"/>
+                            <mxPoint x="330" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=110;exitDy=100;exitPerimeter=0;entryX=0.009;entryY=0.526;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="XNqXfJFGpNn65cFP6wOG-7" target="XNqXfJFGpNn65cFP6wOG-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-18" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="240" y="481" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-12" value="Servidor de base de datos" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" parent="XNqXfJFGpNn65cFP6wOG-18" vertex="1">
+                    <mxGeometry width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-13" value="" style="group" parent="XNqXfJFGpNn65cFP6wOG-18" vertex="1" connectable="0">
+                    <mxGeometry x="10" y="40" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-14" value="MongoDB" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" parent="XNqXfJFGpNn65cFP6wOG-13" vertex="1">
+                    <mxGeometry width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="240" y="301" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-7" value="Servidor NodeJS" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" parent="XNqXfJFGpNn65cFP6wOG-19" vertex="1">
+                    <mxGeometry width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-17" value="API REST" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" parent="XNqXfJFGpNn65cFP6wOG-19" vertex="1">
+                    <mxGeometry x="25" y="50" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-20" value="Recibe las peticiones HTTPS y las&lt;br&gt;envía al API REST o a la aplicación web&amp;nbsp;&lt;br&gt;dependiendo del dominio a través &lt;br&gt;del &lt;i&gt;reverse proxy&lt;/i&gt;." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="130" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-22" value="Almacena los datos &lt;br&gt;de los sensores" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="511" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-23" value="Recibe, filtra y envía los datos&lt;br&gt;al servidor de base de datos.&lt;br&gt;También sirve estos datos a&amp;nbsp;&lt;br&gt;través de un API REST." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="313.5" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-24" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="370" y="110" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-2" value="Servidor web" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" parent="XNqXfJFGpNn65cFP6wOG-24" vertex="1">
+                    <mxGeometry width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-5" value="" style="group" parent="XNqXfJFGpNn65cFP6wOG-24" vertex="1" connectable="0">
+                    <mxGeometry x="10" y="40" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-3" value="NGINX" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" parent="XNqXfJFGpNn65cFP6wOG-5" vertex="1">
+                    <mxGeometry width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-4" value="Reverse proxy" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="XNqXfJFGpNn65cFP6wOG-5" vertex="1">
+                    <mxGeometry x="40" y="21" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-28" value="Aplicación web" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="311" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=110;exitDy=100;exitPerimeter=0;" parent="1" target="XNqXfJFGpNn65cFP6wOG-28" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="460" y="221" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="460" y="260"/>
+                            <mxPoint x="560" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XNqXfJFGpNn65cFP6wOG-30" value="Le permite al usuario final&lt;br&gt;monitorear y controlar &lt;br&gt;el invernadero&lt;br&gt;de forma remota" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="305" width="150" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
