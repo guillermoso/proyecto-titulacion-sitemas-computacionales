@@ -2,11 +2,14 @@
 
 \subsection*{Alcances}
 \begin{itemize}
-    \item El sistema solo monitoreará la temperatura y humedad ambiental, la humedad del suelo y la intensidad de la luz dentro de un invernadero.
+    \item El sistema solo monitoreará 4 variables dentro de un invernadero: temperatura ambiental, humedad del suelo, humedad ambiental e intensidad de la luz.
     \item Se controlará el riego del mismo utilizando una válvula de solenoide y el clima a través de abanicos y aspersores de niebla utilizando técnicas de lógica difusa. 
-    \item Los datos recabados por el monitoreo serán guardados en una base de datos.
-    \item Estos datos podrán ser monitoreados y controlados en tiempo real a través de una interfaz web.
+    \item La interfaz web no será multi-usuario.
+    \item Solamente va a operar en el invernadero del rancho el sufrido
+    \item Estos datos podrán ser monitoreados y controlados en tiempo real solamente a través de una interfaz web.
     \item En la interfaz, se podrán consultar datos históricos sobre las mediciones.
+    \item Juntar los ultimos 3 puntos
+    \item Narrarlo desde la perspectiva de los datos historicos: los datos historicos sobre las maediciones se podran consultar a traves de la interfaz web
 \end{itemize}
 
 \subsection*{Limitaciones}
@@ -14,6 +17,5 @@
     \item El funcionamiento del sistema estará sujeto a disponibilidad de energía eléctrica.
     \item El envío de datos al servidor en la nube estará sujeto a disponibilidad de internet.
     \item No se realizará ningún tipo de control sobre la intensidad de la luz, principalmente por limitantes económicas.
-    \item La interfaz web no será multi-usuario.
     \item El control y monitoreo hecho a través de la interfaz web estará sujeto a disponibilidad de internet por parte del usuario y del servidor.
 \end{itemize}
