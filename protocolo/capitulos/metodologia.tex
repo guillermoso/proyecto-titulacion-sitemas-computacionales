@@ -1,31 +1,12 @@
 \section{Metodología}
 
-% agrupar los pasos a un nivel más alto, por ejemplo para lo de la red inalámbrica en vez de 4 pasos que sea uno. No se esta poniendo nada
-
-% Narrar 
-% 7.1 - 7.4  
-% 7.5 y 7.6  
-% 7.7 y 7.8  
-% 7.9 y 7.10 
-% 7.11 - 7.13
-
-% Usar bullets en vez de las subsecciones
-
-% % agregar tiempo apra aprender logica difusa
-% que me empapare primero en el tema y luego voy a definir un modelo para el invernadero en el cual se definiran categorias para optimizar el control de las variables del invernadero
-
-% dar la idea de saber porque escogi la logica difusa
-
-% red inalambrica
-% modelo de logica difusa
-
-Para el desarrollo de este proyecto se utilizará la metodología ágil. La ventaja de utilizar esta estrategia de desarrollo sobre otras metodologías lineales (como la metodología de casacada) es que soporta el trabajo simultáneo de varias etapas del desarrollo de software. Esta permite diseñar, desarrollar y probar en pequeños ciclos iterativos hasta que se esté contento con la funcionalidad. Además, el principal objetivo de esta metodología es la entrega de pequeñas partes del proyecto que se complementen entre si \cite{what_is_agile_meth}. Este proyecto se dividirá en los siguientes entregables:
+Para el desarrollo de este proyecto se utilizará la metodología ágil. La razón por la que decidió utilizar esta estrategia de desarrollo sobre otras metodologías lineales (como la metodología de casacada) es que soporta el trabajo simultáneo de varias etapas del desarrollo de software. De esta manera, se puede diseñar, desarrollar y probar en pequeños ciclos iterativos hasta que se esté contento con la funcionalidad \cite{what_is_agile_meth}. Este proyecto se dividirá en los siguientes puntos:
 
 \begin{itemize}
 	
-	\item La red inalámbrica de sensores tendrá una topología de estrella, donde la computadora central será un \textit{raspberry pi}. Esta será el punto de acceso, servidor DHCP y servidor DNS de los nodos que conformen la red inalámbrica. Se utilizará \textit{Hologram Nova} para acceder a internet a través de una red celular. Esta computadora será la única con acceso a internet.
+	\item La red inalámbrica de sensores que se utilizará para monitorear el clima del invernadero tendrá una topología de estrella, donde la computadora central será un \textit{raspberry pi}. Esta será el punto de acceso, servidor DHCP y servidor DNS de los nodos que conformen la red inalámbrica. Se utilizará \textit{Hologram Nova} para acceder a internet a través de una red celular. Esta computadora será la única con acceso a internet.
 
-	Los nodos de la red se comunicarán con la computadora central a través de HTTPS, utilizando objetos en notación de Javascript (JSON por sus siglas en inglés) como formato para el intercambio de datos. Esto será posible gracias a que esta alojará un API REST que recibirá los datos obtenidos por cada nodo. En la Figura \ref{fig:coms_nodos_raspberry} se puede apreciar un diagrama general de la red inalámbrica de sensores.
+	Los nodos de la red se comunicarán con la computadora central a través de HTTPS, utilizando JSON como formato para el intercambio de datos. Esto será posible gracias a que esta alojará un API REST que recibirá los datos obtenidos por cada nodo. En la Figura \ref{fig:coms_nodos_raspberry} se puede apreciar un diagrama general de la red inalámbrica de sensores.
 
 	\begin{figure}[!ht]
 		\centering
@@ -67,15 +48,13 @@ Para el desarrollo de este proyecto se utilizará la metodología ágil. La vent
 
 	El primer paso en el desarrollo de la red inalámbrica de sensores será la configuración de la computadora central para que tenga acceso a internet a través la red celular. Después, esta computadora se configurará como punto de acceso, servidor DNS y servidor DHCP.
 
-	Posteriormente, se desarrollarán ambas variantes de nodos de la red y se conectarán al punto de acceso para comenzar a enviar los datos recabados por los sensores. Después, se harán pruebas del rango y de la estabilidad de la red antes de su implementación en el invernadero. 
+	Posteriormente, se desarrollarán ambas variantes de nodos de la red y se conectarán al punto de acceso para comenzar a enviar los datos recabados por los sensores. Después, se harán pruebas del rango y de la estabilidad de la red antes de su implementación en el invernadero. Una vez pasadas las pruebas de estabilidad, se implementará la red inalámbrica de sensores en el invernadero, teniendo en cuenta el rango máximo entre nodos.
 
-	Una vez pasadas las pruebas de estabilidad, se implementará la red inalámbrica de sensores en el invernadero, teniendo en cuenta el rango aceptable entre nodos. % FIXME: no me gusta la palabra aceptable
-
-	\item Se desarrollará un API REST para recibir los datos sensados por cada uno de los nodos que conforman la red inalámbrica de sensores y se enviarán al servidor en la nube a través de internet. Los datos recopilados por los nodos serán analizados al momento de ser recibidos para tomar decisiones de control sobre el clima y el riego del invernadero. Este API estará codificado en Python y se utilizará el \textit{framework} FastAPI. Se probará el API durante el desarollo del mismo.
+	\item Después se desarrollará un API REST para recibir los datos sensados por cada uno de los nodos que conforman la red inalámbrica de sensores y se enviarán al servidor en la nube a través de internet. Los datos recopilados por los nodos serán analizados al momento de ser recibidos para tomar decisiones de control sobre el clima y el riego del invernadero. Este API estará codificado en Python y se utilizará el \textit{framework} FastAPI.
 
 	El API REST estará alojado dentro de la computadora central. Se utilizará NGINX como servidor web, este actuará como \textit{proxy} inverso y \textit{buffer} para el servidor de aplicación del API. Se utilizará PM2 como manejador del proceso principal del servidor de aplicación. Esto asegurará la disponibilidad de la aplicación. 
 	
-	\item Se desarrollará un API REST para recibir los datos recabados por la computadora central y, posteriormente, guardarlos en una instancia de MongoDB. Además, se encargará de la autenticación del cliente web para realizar las consultas de datos históricos y los comandos de control que se tengan que enviar a la computadora central del invernadero. Estará codificada en NodeJS gracias a las bibliotecas disponibles para la integración con la base de datos. Se probará el API durante el desarollo del mismo.
+	\item Luego, se desarrollará un API REST en el servidor en la nube para recibir los datos recabados por la computadora central y, posteriormente, guardarlos en una instancia de MongoDB. Además, se encargará de la autenticación del cliente web para realizar las consultas de datos históricos y los comandos de control que se tengan que enviar a la computadora central del invernadero. Estará codificada en NodeJS gracias a las bibliotecas disponibles para la integración con la base de datos. Se probará el API durante el desarollo del mismo.
 
 	El API REST estará alojado en un servidor privado virtual (VPS por sus siglas en inglés) de Digital Ocean. Se utilizará NGINX como servidor web, tanto para el API REST como para la aplicación web. Este actuará como un \textit{proxy} inverso para enviar las peticiones al servidor de la aplicación o a la aplicación web. Se utilizará el manejador de procesos PM2 para asegurar la disponibilidad del API REST al mantener el servidor de la aplicación siempre disponible. Los componentes que estarán alojados en el servidor en la nube se pueden apreciar en la Figura \ref{fig:componentes_vps}.
 
@@ -86,15 +65,9 @@ Para el desarrollo de este proyecto se utilizará la metodología ágil. La vent
 		\label{fig:componentes_vps}
 	\end{figure}
 
+	\item Posteriormente, se hará una investigación a fondo sobre la lógica difusa y su implementación en el área de control. Después, se diseñará un modelo para el invernadero en el cual se definirán las categorías para optimizar el control del riego y el clima. A partir del modelo, se buscará la mejor manera de hacer su implementación en la computadora central del invernadero.
 
-
-\subsection{Formulación de semántica para razonamiento difuso}
-\subsection{Automatización del control mediante técnicas de lógica difusa}
-
-
-
-
-	\item Se harán maquetas de como serán las distintas interfaces del sistema. Se iterará sobre el diseño y la retroalimentación del usuario final. Se contarán con 2 vistas principales, la vista de autenticación y la vista donde se podrá realizar el control y monitoreo. El monitoreo se hará a través de la visualización de la información recabada por los sensores. Una vez que tanto el usuario como el desarrollador estén satisfechos con las interfaces, se procederá a la siguiente etapa.
+	\item Finalmente, se harán maquetas de como serán las distintas interfaces del sistema. Se iterará sobre el diseño y la retroalimentación del usuario final. Se contarán con 2 vistas principales, la vista de autenticación y la vista donde se podrá realizar el control y monitoreo. El monitoreo se hará a través de la visualización de la información recabada por los sensores. Una vez que tanto el usuario como el desarrollador estén satisfechos con las interfaces, se procederá a la siguiente etapa.
 
 	Se utilizará el \textit{framework} reactivo Vue.js como principal herramienta para el desarrollo de la interfaz. La comunicación con el servidor será a través de Javascript y XML asíncrono (AJAX por sus siglas en inglés) utilizando JSON como formato para el intercambio de datos. Al consumir el API REST que estará en el servidor en la nube se tendrá acceso a las mediciones históricas de los distintos sensores y se podrá hacer el control a través del mismo API. Se utilizará un \textit{JSON web token} (JWT) como \textit{token} de acceso al API. Este tendrá que ser enviado en todas las llamadas excepto en la que se utilice para iniciar sesión y obtener el primer \textit{token}. Las pruebas de esta aplicación web se harán durante el desarrollo de la misma.
 
